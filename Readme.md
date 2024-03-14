@@ -1,33 +1,56 @@
-# Compute Pi
+# compute-pi
 
-`compute-pi` is a Rust program that calculates the value of Pi using the Gauss-Legendre algorithm.
+This crate provides a function to compute the value of Pi to a specified number of digits using the Gauss-Legendre algorithm.
 
 ## Installation
 
-You can install this program using Rust's Cargo package manager. Run the following command:
+You can include this crate in your `Cargo.toml` file as follows:
 
-```bash
-cargo install compute-pi
+```toml
+[dependencies]
+compute-pi = "0.1.2"
 ```
 
 ## Usage
 
-Running `compute-pi` will display the calculated value of Pi. Here's how to use it:
+To use the `compute_pi` function in your Rust code, add the following to your crate root:
+
+```rust
+use rug::Float;
+use compute_pi::compute_pi;
+
+fn main() {
+    // Specify the number of digits of Pi you want to compute
+    let digits = 10;
+
+    // Compute Pi
+    let pi = compute_pi(digits);
+
+    // Print the result
+    println!("Pi to {} decimal places: {}", digits, pi.to_string_radix(10, Some(digits + 2)));
+}
+```
+
+## Command Line Usage
+
+You can also use the `compute-pi` command from the command line. After installing the crate with
+```bash
+cargo install compute-pi
+```
+run the following command:
 
 ```bash
 compute-pi <digits>
 ```
 
-Replace `<digits>` with the number of digits of Pi you want to calculate. For example, to compute Pi to 10 digits:
+Replace `<digits>` with the number of digits of Pi you want to compute. For example:
 
 ```bash
 compute-pi 100
 ```
 
-## Example
+This will print the value of Pi to 100 decimal places.
 
-```bash
-compute-pi 100
-```
+## License
 
-Running the above command will display Pi to 10 decimal places.
+This crate is licensed under the MIT license. See the [LICENSE](LICENSE) file for details.
