@@ -1,16 +1,33 @@
-# compute-pi
+# Compute Pi
 
-A Rust library for computing π (pi) to a high degree of precision.
+`compute-pi` is a Rust program that calculates the value of Pi using the Gauss-Legendre algorithm.
 
-## Features
+## Installation
 
-- Compute π to any number of decimal places
-- Utilizes the Gauss-Legendre algorithm for fast convergence
+You can install this program using Rust's Cargo package manager. Run the following command:
+
+```bash
+cargo install compute-pi
+```
 
 ## Usage
 
-Add this to your `Cargo.toml`:
+Running `compute-pi` will display the calculated value of Pi. Here's how to use it:
 
-```toml
-[dependencies]
-compute-pi = "0.1.0"
+```bash
+compute-pi <digits>
+```
+
+Replace `<digits>` with the number of digits of Pi you want to calculate. For example, to compute Pi to 10 digits:
+
+```bash
+compute-pi 100
+```
+
+## Example
+
+```bash
+compute-pi 100
+```
+
+Running the above command will display Pi to 10 decimal places.
