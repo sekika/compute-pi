@@ -1,0 +1,13 @@
+[package]
+name = "compute-pi"
+version = "0.1.0"
+authors = ["Katsutoshi Seki"]
+edition = "2018"
+description = "A Rust library for computing π to a high degree of precision."
+license = "MIT"
+repository = "https://github.com/sekika/compute-pi"
+keywords = ["pi", "mathematics", "numerical"]
+categories = ["algorithms", "mathematics"]
+
+[dependencies]
+rug = "1.13.0"
