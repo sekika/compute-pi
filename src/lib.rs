@@ -45,6 +45,25 @@ pub fn compute_pi(digits: usize) -> Float {
     pi_result
 }
 
+/// Calculates the value of pi to a specified number of decimal places using
+/// the Gauss-Legendre algorithm.
+///
+/// # Arguments
+///
+/// * `digits` - The number of decimal places of pi to calculate.
+///
+/// # Returns
+///
+/// A `String` representing the calculated value of pi to the specified
+/// number of decimal places.
+///
+pub fn compute_pi_str(digits: usize) -> String {
+    let pi = compute_pi(digits);
+    let pi_str = pi.to_string_radix(10, Some(digits + 5));
+    let pi_str_trimmed = pi_str[0..(digits + 2)].to_string();
+    pi_str_trimmed
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -54,5 +73,16 @@ mod tests {
         let pi_computed = compute_pi(10);
         let pi_expected = Float::with_val(256, 3.1415926535);
         assert!((pi_computed - &pi_expected).abs() < Float::with_val(256, 1e-10));
+    }
+
+    #[test]
+    fn test_compute_pi_str() {
+        // Test with 5 digits
+        let pi_str_5 = compute_pi_str(5);
+        assert_eq!(pi_str_5, "3.14159");
+
+        // Test with 10 digits
+        let pi_str_10 = compute_pi_str(10);
+        assert_eq!(pi_str_10, "3.1415926535");
     }
 }

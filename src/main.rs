@@ -1,4 +1,4 @@
-use compute_pi::compute_pi;
+use compute_pi::compute_pi_str;
 use std::env;
 
 /// The main function of the program. It parses the command-line arguments
@@ -32,8 +32,6 @@ fn main() {
         return;
     }
     let digits: usize = args[1].parse().expect("Please provide a valid number of digits.");
-    let pi = compute_pi(digits);
-    let pi_str = pi.to_string_radix(10, Some(digits + 5));
-    let pi_str_trimmed = &pi_str[0..(digits + 2)];
-    println!("Pi to {} decimal places: {}", digits, pi_str_trimmed);
+    let pi = compute_pi_str(digits);
+    println!("Pi to {} decimal places: {}", digits, pi);
 }

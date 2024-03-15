@@ -8,27 +8,25 @@ You can include this crate in your `Cargo.toml` file as follows:
 
 ```toml
 [dependencies]
-compute-pi = "0.2.0"
+compute-pi = "0.2.1"
 ```
 
 ## Usage
 
-To use the `compute_pi` function in your Rust code, add the following to your crate root:
+To use the `compute_pi_str` function in your Rust code, add the following to your crate root:
 
 ```rust
-use compute_pi::compute_pi;
+use compute_pi::compute_pi_str;
 
 fn main() {
     // Specify the number of digits of Pi you want to compute
     let digits = 100;
 
     // Compute Pi
-    let pi = compute_pi(digits);
+    let pi = compute_pi_str(digits);
 
     // Print calculated decimal
-    let pi_str = pi.to_string_radix(10, Some(digits + 5));
-    let pi_str_trimmed = &pi_str[0..(digits + 2)];
-    println!("Pi to {} decimal places: {}", digits, pi_str_trimmed);
+    println!("Pi to {} decimal places: {}", digits, pi);
 }
 ```
 
