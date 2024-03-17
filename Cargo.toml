@@ -1,6 +1,6 @@
 [package]
 name = "compute-pi"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Katsutoshi Seki"]
 edition = "2018"
 description = "A Rust library for computing π to a high degree of precision."
@@ -17,4 +17,4 @@ path = "src/main.rs"
 path = "src/lib.rs"
 
 [dependencies]
-rug = "1.13.0"
+rug = "1.24"

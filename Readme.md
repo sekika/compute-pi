@@ -12,7 +12,7 @@ You can include this crate in your `Cargo.toml` file as follows:
 
 ```toml
 [dependencies]
-compute-pi = "0.2.1"
+compute-pi = "0.2"
 ```
 
 ## Usage
