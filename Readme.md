@@ -1,6 +1,10 @@
 # compute-pi
 
-This crate provides a function to compute the value of Pi to a specified number of digits using the Gauss-Legendre algorithm.
+Compute-pi calculates the value of pi to an arbitrary number of digits using the [Gauss–Legendre algorithm](https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_algorithm). The computed result of pi to 320 million digits using compute-pi was confirmed to match exactly with the results obtained using [y-cruncher](http://www.numberworld.org/y-cruncher/) and the Chudnovsky algorithm.
+
+## Performance
+
+On a MacBook Air (Apple M1, 16 GB), pi to 1 million digits was computed in 1.5 seconds, and to 320 million digits in 24 minutes, but the calculation did not complete within 10 hours for 330 million digits. Similarly, on a Mac mini (Apple M1, 16 GB), pi to 320 million digits was computed, but the calculation did not complete within 10 hours for 330 million digits. It is presumed that the calculation is taking a long time due to memory swapping, as it does not end in a panic due to memory allocation failure but instead continues indefinitely. Since both machines yielded the same result, it is considered that 320 million digits is the maximum number of digits that can be computed using compute-pi with 16 GB of memory.
 
 ## Installation
 
