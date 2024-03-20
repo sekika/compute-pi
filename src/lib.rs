@@ -8,7 +8,8 @@ use std::convert::TryFrom;
 ///
 /// # Arguments
 ///
-/// * `digits` - The number of decimal places of pi to calculate.
+/// * `digits` - The number of decimal places of pi to calculate,
+///              not to exceed 1,292,913,983.
 ///
 /// # Returns
 ///
@@ -52,7 +53,8 @@ pub fn compute_pi(digits: usize) -> Float {
 ///
 /// # Arguments
 ///
-/// * `digits` - The number of decimal places of pi to calculate.
+/// * `digits` - The number of decimal places of pi to calculate,
+///              not to exceed 1,292,913,983.
 ///
 /// # Returns
 ///
