@@ -1,8 +1,10 @@
+#![doc = include_str!("../README.md")]
+
 use rug::{Float, ops::Pow};
 use std::convert::TryFrom;
 
 /// Calculates the value of pi to a specified number of decimal places using
-/// the Gauss-Legendre algorithm.
+/// the Gauss-Legendre algorithm and returns Float value.
 ///
 /// # Arguments
 ///
@@ -46,7 +48,7 @@ pub fn compute_pi(digits: usize) -> Float {
 }
 
 /// Calculates the value of pi to a specified number of decimal places using
-/// the Gauss-Legendre algorithm.
+/// the Gauss-Legendre algorithm and returns String value.
 ///
 /// # Arguments
 ///
