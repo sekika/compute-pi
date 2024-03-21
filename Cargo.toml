@@ -1,6 +1,6 @@
 [package]
 name = "compute-pi"
-version = "0.2.4"
+version = "0.2.5"
 authors = ["Katsutoshi Seki"]
 edition = "2018"
 description = "A Rust library designed for computing pi to millions of digits."

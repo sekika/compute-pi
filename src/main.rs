@@ -32,6 +32,10 @@ fn main() {
         return;
     }
     let digits: usize = args[1].parse().expect("Please provide a valid number of digits.");
+    if digits > 1_292_913_983 {
+        eprintln!("Digits should not exceed 1,292,913,983.");
+        return;
+    }
     let pi = compute_pi_str(digits);
     println!("Pi to {} decimal places: {}", digits, pi);
 }
